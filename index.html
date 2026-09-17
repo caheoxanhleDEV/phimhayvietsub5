@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050814">
+<title>PhimHayVietSub — Xem phim trực tuyến</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="PhimHayVietSub"><span class="brand-mark">◆</span><span>PhimHayVietSub</span></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Mở menu">☰</button>
+  <nav id="mainNav">
+    <a href="#home">Trang chủ</a><a href="#movies">Phim</a><a href="#genres">Thể loại</a><a href="#crew">Lồng tiếng</a>
+  </nav>
+  <div class="top-actions">
+    <button class="icon-btn" id="searchBtn" aria-label="Tìm kiếm">⌕</button>
+    <button class="btn ghost" id="loginBtn">Đăng nhập</button>
+    <button class="btn gradient" id="registerBtn">Đăng ký</button>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">🔥 PHIM NỔI BẬT</div>
+    <h1 id="heroTitle">Azure Pulse</h1>
+    <div class="hero-meta"><span id="heroYear">2025</span><i>•</i><span id="heroGenre">Khoa học viễn tưởng, Hành động</span><i>•</i><strong>★ <span id="heroRating">4.8</span></strong></div>
+    <p id="heroDesc">Trong tương lai gần, một nhóm hacker trẻ phát hiện ra AI đang âm thầm kiểm soát toàn bộ hạ tầng thành phố.</p>
+    <div class="hero-actions"><button class="btn gradient large" id="heroWatch">▶️ Xem ngay</button><button class="btn ghost large" id="heroDetail">Chi tiết</button></div>
+  </div>
+</section>
+
+<section class="section" id="movies">
+  <div class="section-head"><h2><span class="section-icon">🔥</span> Phim nổi bật</h2><button class="see-all" data-scroll="movies">Xem tất cả →</button></div>
+  <div class="rail" id="featuredRail"></div>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2><span class="section-icon">✦</span> Phim mới cập nhật</h2><button class="see-all" data-scroll="movies">Xem tất cả →</button></div>
+  <div class="rail" id="newRail"></div>
+</section>
+
+<section class="section" id="genres">
+  <div class="section-head"><h2><span class="section-icon">◆</span> Thể loại nổi bật</h2><button class="see-all" id="allGenres">Xem tất cả →</button></div>
+  <div class="genre-rail" id="genreRail"></div>
+</section>
+
+<section class="section" id="crew">
+  <div class="section-head"><h2><span class="section-icon">●</span> Diễn viên lồng tiếng nổi bật</h2><button class="see-all">Xem tất cả →</button></div>
+  <div class="crew-rail" id="crewRail"></div>
+</section>
+
+<footer>
+  <div class="footer-main"><div><a class="brand footer-brand" href="#home"><span class="brand-mark">◆</span><span>PhimHayVietSub</span></a><p>Nền tảng xem phim trực tuyến — anime, phim Việt, phim lồng tiếng và nhiều hơn nữa.</p></div><div><h3>Khám phá</h3><a href="#movies">Phim</a><a href="#genres">Thể loại</a><a href="#">VIP</a><a href="#">Hỗ trợ</a></div></div>
+  <div class="copyright">© 2026 PhimHayVietSub. Giao diện demo frontend.</div>
+</footer>
+</main>
+
+<div class="bottom-nav"><a class="active" href="#home">⌂<span>Trang chủ</span></a><a href="#movies">⌕<span>Khám phá</span></a><a href="#movies">▣<span>Thư viện</span></a><a href="#genres">♕<span>VIP</span></a><button id="accountBottom">♙<span>Tài khoản</span></button></div>
+
+<div class="search-panel hidden" id="searchPanel"><div class="search-box"><button class="close-x" data-close="searchPanel" aria-label="Đóng">×</button><h2>Tìm kiếm phim</h2><input id="searchInput" autocomplete="off" placeholder="Nhập tên phim, thể loại..."/><div id="searchResults"></div></div></div>
+
+<div class="modal hidden" id="modal"><div class="modal-card" role="dialog" aria-modal="true"><button class="close-x" id="modalClose" aria-label="Đóng">×</button><div id="modalContent"></div></div></div>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="app.js"></script>
+</body>
+</html>
